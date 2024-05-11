@@ -34,6 +34,7 @@ export const useDialogStore = defineStore("dialog", {
 			reportIssue: false,
 			userSettings: false,
 			embedComponent: false,
+			mapFilter: true,
 		},
 		// Stores the content for notifications
 		notification: {
@@ -50,6 +51,11 @@ export const useDialogStore = defineStore("dialog", {
 		moreInfoContent: null,
 		// Stores Edit or Add mode for addeditdashboards dialog
 		addEdit: "",
+		coor: {
+			latitude: "",
+			longitude: "",
+		},
+		mapFilterRadius: 0,
 	}),
 	getters: {},
 	actions: {
@@ -92,6 +98,15 @@ export const useDialogStore = defineStore("dialog", {
 				index: index,
 				name: name,
 			};
+		},
+		setCoor(latitude, longitude) {
+			this.coor = {
+				latitude,
+				longitude,
+			};
+		},
+		setMapFilterRadius(radius) {
+			this.mapFilterRadius = radius;
 		},
 	},
 });

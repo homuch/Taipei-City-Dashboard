@@ -37,6 +37,7 @@ type Component struct {
 	QueryType      string          `json:"query_type" gorm:"column:query_type;type:varchar"`
 	QueryChart     string          `json:"-" gorm:"column:query_chart;type:text"`
 	QueryHistory   string          `json:"-" gorm:"column:query_history;type:text"`
+	FilterType     string          `json:"filter_type" gorm:"column:filter_type;type:text"`
 }
 
 // ComponentMap is the model for the component_maps table.
@@ -65,7 +66,7 @@ type ComponentChart struct {
 // createTempComponentDB joins the components, component_maps, and component_charts tables and selects the columns to return.
 func createTempComponentDB() *gorm.DB {
 	// Columns to select from the components table
-	selectColumns := []string{"id", "index", "name", "history_config", "map_filter", "time_from", "time_to", "update_freq", "update_freq_unit", "source", "short_desc", "long_desc", "use_case", "links", "contributors", "updated_at", "query_type"}
+	selectColumns := []string{"id", "index", "name", "history_config", "map_filter", "time_from", "time_to", "update_freq", "update_freq_unit", "source", "short_desc", "long_desc", "use_case", "links", "contributors", "updated_at", "query_type", "filter_type"}
 	selectString := ""
 	for _, column := range selectColumns {
 		selectString += "components." + column + ", "

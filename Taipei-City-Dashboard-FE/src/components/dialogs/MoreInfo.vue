@@ -10,6 +10,7 @@ import DialogContainer from "./DialogContainer.vue";
 import HistoryChart from "../charts/HistoryChart.vue";
 import DownloadData from "./DownloadData.vue";
 import EmbedComponent from "./EmbedComponent.vue";
+import MapFilter from "./MapFilter.vue";
 
 const dialogStore = useDialogStore();
 const contentStore = useContentStore();
@@ -26,119 +27,188 @@ function getLinkTag(link, index) {
 		return `資料集 - ${index + 1} (其他)`;
 	}
 }
+
+// News
+const processtime = (time) => {
+	if (typeof time !== "string") return "";
+	let hour = time.slice(11, 13);
+	hour = String(+hour + 8);
+	const processedTime =
+		time.substring(0, 10) + " " + time.substring(11, 19) + " (UTC+8)";
+	return processedTime;
+};
+
+function getNews(keyword, el) {
+	const apiKey = "e8ecbb76ffe047c38ab4f687c8436304";
+	const url = `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=${keyword}&sortBy=relevancy&language=zh&apiKey=${apiKey}`;
+	const headers = new Headers({ "X-Requested-With": "getnews" });
+	fetch(url, { headers })
+		.then((response) => response.json())
+		.then((data) => {
+			const articles = data.articles;
+			if (articles.length > 0) {
+				let i = 0;
+				// while (i < articles.length) {
+				// 	if (articles[i].source.name === "Yahoo Entertainment") i++;
+				// 	else break;
+				// }
+				if (i < articles.length) {
+					const news = articles[i];
+					document.getElementById("news-title").innerHTML =
+						news.title;
+					document.getElementById("news-time").innerHTML =
+						processtime(news.publishedAt);
+					document.getElementById("news-source").innerHTML =
+						"來源：" + news.source.name;
+					document.getElementById("news-details").href = news.url;
+					document.getElementById("news-details").innerHTML =
+						"新聞連結";
+				}
+			}
+		})
+		.catch((error) => console.log("Error:", error));
+}
+const vMyDirective = {
+	beforeMount: (el) => {
+		console.log(el);
+		console.log(dialogStore.moreInfoContent.name);
+		getNews(dialogStore.moreInfoContent.name, el);
+	},
+};
+
+//getNews(dialogStore.moreInfoContent.name);
+console.log(dialogStore.moreInfoContent);
+// watchEffect(() => {
+// 	console.log(dialogStore.moreInfoContent);
+// });
 </script>
 
 <template>
-  <DialogContainer
-    :dialog="`moreInfo`"
-    @on-close="dialogStore.hideAllDialogs"
-  >
-    <div class="moreinfo">
-      <DashboardComponent
-        :config="dialogStore.moreInfoContent"
-        mode="large"
-      />
-      <div class="moreinfo-info">
-        <div class="moreinfo-info-data">
-          <h3>
-            組件說明（{{
-              ` ID: ${dialogStore.moreInfoContent.id}｜Index:
+	<DialogContainer
+		:dialog="`moreInfo`"
+		@on-close="dialogStore.hideAllDialogs"
+	>
+		<div class="moreinfo">
+			<DashboardComponent
+				:config="dialogStore.moreInfoContent"
+				mode="large"
+			/>
+			<div class="moreinfo-info">
+				<div class="moreinfo-info-data">
+					<h3>
+						組件說明（{{
+							` ID: ${dialogStore.moreInfoContent.id}｜Index:
 											${dialogStore.moreInfoContent.index} `
-            }}）
-          </h3>
-          <p>{{ dialogStore.moreInfoContent.long_desc }}</p>
-          <h3>範例情境</h3>
-          <p>{{ dialogStore.moreInfoContent.use_case }}</p>
-          <div v-if="dialogStore.moreInfoContent.history_config">
-            <h3>歷史軸</h3>
-            <h4>*點擊並拉動以檢視細部區間資料</h4>
-            <HistoryChart
-              :chart_config="
-                dialogStore.moreInfoContent.chart_config
-              "
-              :series="dialogStore.moreInfoContent.history_data"
-              :history_config="
-                dialogStore.moreInfoContent.history_config
-              "
-            />
-          </div>
-          <div v-if="dialogStore.moreInfoContent.links[0]">
-            <h3>相關資料</h3>
-            <div class="moreinfo-info-links">
-              <a
-                v-for="(link, index) in dialogStore
-                  .moreInfoContent.links"
-                :key="link"
-                :href="link"
-                target="_blank"
-                rel="noreferrer"
-              >{{ getLinkTag(link, index) }}</a>
-            </div>
-          </div>
-          <div v-if="dialogStore.moreInfoContent.contributors">
-            <h3>協作者</h3>
-            <div class="moreinfo-info-contributors">
-              <div
-                v-for="contributor in dialogStore
-                  .moreInfoContent.contributors"
-                :key="contributor"
-              >
-                <a
-                  :href="
-                    contentStore.contributors[contributor]
-                      .link
-                  "
-                  target="_blank"
-                  rel="noreferrer"
-                ><img
-                  :src="`/images/contributors/${
-                    contentStore.contributors[
-                      contributor
-                    ].image
-                      ? contentStore.contributors[
-                        contributor
-                        // eslint-disable-next-line no-mixed-spaces-and-tabs
-                      ].image
-                      : contributor
-                  }.png`"
-                  :alt="`協作者-${contentStore.contributors[contributor].name}`"
-                >
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="moreinfo-info-control">
-          <button
-            v-if="authStore.token"
-            @click="
-              dialogStore.showReportIssue(
-                dialogStore.moreInfoContent.id,
-                dialogStore.moreInfoContent.index,
-                dialogStore.moreInfoContent.name
-              )
-            "
-          >
-            <span>flag</span>回報
-          </button>
-          <button
-            v-if="
-              dialogStore.moreInfoContent.chart_config
-                .types[0] !== 'MetroChart'
-            "
-            @click="dialogStore.showDialog('downloadData')"
-          >
-            <span>download</span>下載
-          </button>
-          <button @click="dialogStore.showDialog('embedComponent')">
-            <span>code</span>內嵌
-          </button>
-        </div>
-        <DownloadData />
-        <EmbedComponent />
-      </div>
-    </div>
-  </DialogContainer>
+						}}）
+					</h3>
+					<p>{{ dialogStore.moreInfoContent.long_desc }}</p>
+					<h3>範例情境</h3>
+					<p>{{ dialogStore.moreInfoContent.use_case }}</p>
+					<div v-if="dialogStore.moreInfoContent.history_config">
+						<h3>歷史軸</h3>
+						<h4>*點擊並拉動以檢視細部區間資料</h4>
+						<HistoryChart
+							:chart_config="
+								dialogStore.moreInfoContent.chart_config
+							"
+							:series="dialogStore.moreInfoContent.history_data"
+							:history_config="
+								dialogStore.moreInfoContent.history_config
+							"
+						/>
+					</div>
+					<div v-my-directive class="moreinfo-info-news">
+						<h3>相關新聞</h3>
+						<p id="news-title"></p>
+						<p id="news-time"></p>
+						<p id="news-source"></p>
+						<p><a id="news-details" target="_blank"></a></p>
+					</div>
+					<div v-if="dialogStore.moreInfoContent.links[0]">
+						<h3>相關資料</h3>
+						<div class="moreinfo-info-links">
+							<a
+								v-for="(link, index) in dialogStore
+									.moreInfoContent.links"
+								:key="link"
+								:href="link"
+								target="_blank"
+								rel="noreferrer"
+								>{{ getLinkTag(link, index) }}</a
+							>
+						</div>
+					</div>
+					<div v-if="dialogStore.moreInfoContent.contributors">
+						<h3>協作者</h3>
+						<div class="moreinfo-info-contributors">
+							<div
+								v-for="contributor in dialogStore
+									.moreInfoContent.contributors"
+								:key="contributor"
+							>
+								<a
+									:href="
+										contentStore.contributors[contributor]
+											.link
+									"
+									target="_blank"
+									rel="noreferrer"
+									><img
+										:src="`/images/contributors/${
+											contentStore.contributors[
+												contributor
+											].image
+												? contentStore.contributors[
+														contributor
+														// eslint-disable-next-line no-mixed-spaces-and-tabs
+												  ].image
+												: contributor
+										}.png`"
+										:alt="`協作者-${contentStore.contributors[contributor].name}`"
+									/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="moreinfo-info-control">
+					<button
+						@click="dialogStore.showDialog('mapFilter')"
+						v-if="dialogStore.moreInfoContent.map_config[0]"
+					>
+						<span>map</span>鄰近資料
+					</button>
+					<button
+						v-if="authStore.token"
+						@click="
+							dialogStore.showReportIssue(
+								dialogStore.moreInfoContent.id,
+								dialogStore.moreInfoContent.index,
+								dialogStore.moreInfoContent.name
+							)
+						"
+					>
+						<span>flag</span>回報
+					</button>
+					<button
+						v-if="
+							dialogStore.moreInfoContent.chart_config
+								.types[0] !== 'MetroChart'
+						"
+						@click="dialogStore.showDialog('downloadData')"
+					>
+						<span>download</span>下載
+					</button>
+					<button @click="dialogStore.showDialog('embedComponent')">
+						<span>code</span>內嵌
+					</button>
+				</div>
+				<DownloadData />
+				<EmbedComponent />
+				<MapFilter />
+			</div>
+		</div>
+	</DialogContainer>
 </template>
 
 <style scoped lang="scss">
@@ -200,6 +270,15 @@ function getLinkTag(link, index) {
 			}
 			&::-webkit-scrollbar-thumb:hover {
 				background-color: rgba(136, 135, 135, 1);
+			}
+		}
+
+		&-news {
+			a {
+				color: var(--color-complement-text);
+				text-decoration: underline;
+				font-size: var(--font-s);
+				margin-bottom: 0.75rem;
 			}
 		}
 

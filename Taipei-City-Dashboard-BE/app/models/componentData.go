@@ -13,6 +13,7 @@ import (
 type ChartDataQuery struct {
 	QueryType  string `json:"query_type" gorm:"column:query_type"`
 	QueryChart string `json:"query_chart" gorm:"column:query_chart"`
+	QueryChartDistanceFilter string `json:"query_chart_distance_filter" gorm:"column:query_chart_distance_filter"`
 }
 
 // HistoryDataQuery is the model for getting the history data query.
@@ -114,18 +115,18 @@ type MapLegendData struct {
 
 /* ----- Handlers ----- */
 
-func GetComponentChartDataQuery(id int) (queryType string, queryString string, err error) {
+func GetComponentChartDataQuery(id int) (queryType string, queryString string, queryStringFilter string,err error) {
 	var chartDataQuery ChartDataQuery
 
 	err = DBManager.
 		Table("components").
-		Select("query_type, query_chart").
+		Select("query_type, query_chart, query_chart_distance_filter").
 		Where("components.id = ?", id).
 		Find(&chartDataQuery).Error
 	if err != nil {
-		return queryType, queryString, err
+		return queryType, queryString, queryStringFilter, err
 	}
-	return chartDataQuery.QueryType, chartDataQuery.QueryChart, nil
+	return chartDataQuery.QueryType, chartDataQuery.QueryChart, chartDataQuery.QueryChartDistanceFilter ,nil
 }
 
 func GetComponentHistoryDataQuery(id int, timeFrom string, timeTo string) (queryHistory string, err error) {

@@ -1,4 +1,3 @@
- 
 /* eslint-disable indent */
 
 // Developed by Taipei Urban Intelligence Center 2023-2024
@@ -149,6 +148,7 @@ export const useContentStore = defineStore("content", {
 		// Will call an additional API if the component has history data
 		async setCurrentDashboardChartData() {
 			// 4-1. Loop through all the components of a dashboard
+			const dialogStore = useDialogStore();
 			for (
 				let index = 0;
 				index < this.currentDashboard.components.length;
@@ -163,12 +163,25 @@ export const useContentStore = defineStore("content", {
 						params: !["static", "current", "demo"].includes(
 							component.time_from
 						)
-							? getComponentDataTimeframe(
-									component.time_from,
-									component.time_to,
-									true
-							  )
-							: {},
+							? {
+									filter_by_distance:
+										dialogStore.mapFilterRadius !== 0,
+									filter_distance: `${dialogStore.mapFilterRadius}`,
+									filter_lat: `${dialogStore.coor.latitude}`,
+									filter_long: `${dialogStore.coor.longitude}`,
+									...getComponentDataTimeframe(
+										component.time_from,
+										component.time_to,
+										true
+									),
+							  }
+							: {
+									filter_by_distance:
+										dialogStore.mapFilterRadius !== 0,
+									filter_distance: `${dialogStore.mapFilterRadius}`,
+									filter_lat: `${dialogStore.coor.latitude}`,
+									filter_long: `${dialogStore.coor.longitude}`,
+							  },
 					}
 				);
 				this.currentDashboard.components[index].chart_data =
@@ -279,6 +292,7 @@ export const useContentStore = defineStore("content", {
 		},
 		// 2. Get the info of a single component (used in /component/:index)
 		async getCurrentComponentData(index) {
+			console.log("WOOOO", index);
 			const dialogStore = useDialogStore();
 			if (Object.keys(this.contributors).length === 0) {
 				this.setContributors();
@@ -292,7 +306,7 @@ export const useContentStore = defineStore("content", {
 					filtervalue: index,
 				},
 			});
-
+			console.log(response_1.data);
 			if (response_1.data.results === 0) {
 				this.loading = false;
 				this.error = true;
@@ -300,7 +314,7 @@ export const useContentStore = defineStore("content", {
 			}
 
 			dialogStore.moreInfoContent = response_1.data.data[0];
-
+			console.log(dialogStore.moreInfoContent);
 			// 2-2. Get the component chart data
 			const response_2 = await http.get(
 				`/component/${dialogStore.moreInfoContent.id}/chart`,
@@ -308,12 +322,25 @@ export const useContentStore = defineStore("content", {
 					params: !["static", "current", "demo"].includes(
 						dialogStore.moreInfoContent.time_from
 					)
-						? getComponentDataTimeframe(
-								dialogStore.moreInfoContent.time_from,
-								dialogStore.moreInfoContent.time_to,
-								true
-						  )
-						: {},
+						? {
+								filter_by_distance:
+									dialogStore.mapFilterRadius !== 0,
+								filter_distance: `${dialogStore.mapFilterRadius}`,
+								filter_lat: `${dialogStore.coor.latitude}`,
+								filter_long: `${dialogStore.coor.longitude}`,
+								...getComponentDataTimeframe(
+									dialogStore.moreInfoContent.time_from,
+									dialogStore.moreInfoContent.time_to,
+									true
+								),
+						  }
+						: {
+								filter_by_distance:
+									dialogStore.mapFilterRadius !== 0,
+								filter_distance: `${dialogStore.mapFilterRadius}`,
+								filter_lat: `${dialogStore.coor.latitude}`,
+								filter_long: `${dialogStore.coor.longitude}`,
+						  },
 				}
 			);
 

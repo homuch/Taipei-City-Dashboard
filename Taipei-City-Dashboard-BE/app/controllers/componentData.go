@@ -9,6 +9,9 @@ import (
 	"TaipeiCityDashboardBE/app/util"
 
 	"github.com/gin-gonic/gin"
+
+	"fmt"
+	"strings"
 )
 
 /*
@@ -24,18 +27,45 @@ func GetComponentChartData(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"status": "error", "message": "Invalid component ID"})
 		return
 	}
+	var queryString string
 
 	// 2. Get the chart data query and chart data type from the database
-	queryType, queryString, err := models.GetComponentChartDataQuery(id)
+	queryType, queryStringOrigined, queryStringFiltered, err := models.GetComponentChartDataQuery(id)
+	// fmt.Println(queryStringOrigined)
+	// fmt.Println("-----------------")
+	// fmt.Println(queryStringFiltered)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"status": "error", "message": err.Error()})
 		return
 	}
-	if (queryString == "") || (queryType == "") {
+	if (queryStringOrigined == "") || (queryType == "") {
 		c.JSON(http.StatusNotFound, gin.H{"status": "error", "message": "No chart data available"})
 		return
 	}
+	
 
+	filter_by_distance:= c.Query("filter_by_distance")
+	// fmt.Println(filter_by_distance)
+	if filter_by_distance == "true" &&
+	(strings.Count(queryStringFiltered, "%s") == 3 ||
+	strings.Count(queryStringOrigined, "%s") == 5){
+		// if strings.Count(queryStringFiltered, "%s") != 3 ||
+		// 	strings.Count(queryStringOrigined, "%s") != 5 {
+		// 	queryString = queryStringOrigined
+		// }
+		filter_distance := c.Query("filter_distance")
+		filter_lat := c.Query("filter_lat")
+		filter_long := c.Query("filter_long")
+		if strings.Count(queryStringOrigined, "%s") == 5 {
+			queryString = fmt.Sprintf(queryStringFiltered, "%s", "%s", filter_distance, filter_lat, filter_long)
+		} else {
+			queryString = fmt.Sprintf(queryStringFiltered, filter_distance, filter_lat, filter_long)
+		}
+	} else {
+		queryString = queryStringOrigined
+	}
+	// fmt.Println("++++++++++++++++++++++++++++")
+	// fmt.Println(queryString)
 	timeFrom, timeTo := util.GetTime(c)
 
 	// 3. Get and parse the chart data based on chart data type

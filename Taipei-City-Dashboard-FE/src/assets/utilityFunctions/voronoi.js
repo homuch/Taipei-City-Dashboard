@@ -404,7 +404,7 @@ function findVoronoiCell(point) {
 
 export function voronoi(data) {
 	let points = data.map((coord) => new Point(coord[0], coord[1]));
-
+	console.log(points);
 	BowyerWatson(points);
 
 	let cells = points.map((p) => {

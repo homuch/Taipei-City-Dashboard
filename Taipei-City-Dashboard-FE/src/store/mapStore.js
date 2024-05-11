@@ -423,7 +423,7 @@ export const useMapStore = defineStore("map", {
 
 			// Get features alone
 			let { features } = data;
-
+			console.log(features);
 			// Get coordnates alone
 			let coords = features.map(
 				(location) => location.geometry.coordinates
