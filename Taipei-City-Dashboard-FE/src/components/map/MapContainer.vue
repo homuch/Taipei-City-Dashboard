@@ -1,7 +1,7 @@
 <!-- Developed by Taipei Urban Intelligence Center 2023-2024-->
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { computed, onMounted, ref, watch } from "vue";
 import { useMapStore } from "../../store/mapStore";
 import { useDialogStore } from "../../store/dialogStore";
 import { useContentStore } from "../../store/contentStore";
@@ -14,6 +14,118 @@ const contentStore = useContentStore();
 
 const districtLayer = ref(false);
 const villageLayer = ref(false);
+
+const pickedComponent = ref(0);
+const inputValue = ref(0);
+
+const timeout = ref(null);
+
+const step = computed(() =>
+	contentStore.currentDashboard.components[pickedComponent.value]
+		?.filter_type === "distance"
+		? 0.1
+		: 1
+);
+
+const min = computed(() =>
+	contentStore.currentDashboard.components[pickedComponent.value]
+		?.filter_type === "distance"
+		? 0
+		: -30
+);
+
+const max = computed(() =>
+	contentStore.currentDashboard.components[pickedComponent.value]
+		?.filter_type === "distance"
+		? 15
+		: 30
+);
+
+const filter_value = computed(() => {
+	if (
+		!contentStore.currentDashboard.components[pickedComponent.value]
+			.filter_type
+	)
+		return "";
+	else if (
+		contentStore.currentDashboard.components[pickedComponent.value]
+			.filter_type === "distance"
+	)
+		return inputValue.value;
+
+	const now = new Date();
+	const used = new Date(
+		now.getTime() + inputValue.value * 24 * 60 * 60 * 1000
+	);
+	return `${used.toISOString().split("T")[0]} 00:00:00`;
+});
+const to_display = computed(() => {
+	if (
+		!contentStore.currentDashboard.components[pickedComponent.value]
+			.filter_type
+	)
+		return "";
+	else if (
+		contentStore.currentDashboard.components[pickedComponent.value]
+			.filter_type === "distance"
+	)
+		return "方圓" + inputValue.value + "公里";
+
+	const now = new Date();
+	const used = new Date(
+		now.getTime() + inputValue.value * 24 * 60 * 60 * 1000
+	);
+	return `${used.getFullYear()}年${used.getMonth() + 1}日${used.getDate()}日`;
+});
+
+watch(inputValue, () => {
+	// console.log(filter_value.value);
+	// console.log(
+	// 	contentStore.currentDashboard.components[pickedComponent.value]
+	// );
+	if (
+		!contentStore.currentDashboard.components[pickedComponent.value]
+			?.filter_type
+	)
+		return;
+	dialogStore.setMapFilterRadius(filter_value.value);
+
+	navigator.geolocation.getCurrentPosition((position) => {
+		dialogStore.setCoor(
+			position.coords.latitude,
+			position.coords.longitude
+		);
+	});
+
+	clearTimeout(timeout.value);
+	timeout.value = setTimeout(() => {
+		contentStore.updateDashboardComponentData(
+			contentStore.currentDashboard.components[pickedComponent.value]
+				.index
+		);
+		if (
+			contentStore.currentDashboard.components[pickedComponent.value]
+				?.filter_type === "time_clip"
+		) {
+			const map_config =
+				contentStore.currentDashboard.components[pickedComponent.value]
+					.map_config[0];
+			let mapLayerId = `${map_config.index}-${map_config.type}`;
+			// console.log(mapLayerId);
+
+			mapStore.map.setFilter(mapLayerId, [
+				"all",
+				["<", ["get", "起日"], filter_value.value],
+				[">", ["get", "迄日"], filter_value.value],
+			]);
+		}
+		// mapStore.updateLayer(
+		// 	contentStore.currentDashboard.components[pickedComponent.value]
+		// 		.layer,
+		// 	filter_value.value
+		// );
+	}, 500);
+});
 
 // const newSavedLocation = ref("");
 
@@ -75,6 +187,41 @@ onMounted(() => {
 				>
 					<span>layers</span>
 				</button>
+				<input
+					type="range"
+					v-if="
+						contentStore.currentDashboard.components[
+							pickedComponent
+						].filter_type
+					"
+					v-model="inputValue"
+					:min="min"
+					:max="max"
+					:step="step"
+				/>
+				<span v-else class="small-text">&nbsp;</span>
+				<div
+					v-if="
+						contentStore.currentDashboard.components[
+							pickedComponent
+						].filter_type
+					"
+					class="small-text"
+				>
+					{{ to_display }}
+				</div>
+				<span v-else class="small-text">本組件不支援進階篩選</span>
+
+				<select v-model="pickedComponent">
+					<option
+						v-for="(item, key) in contentStore.currentDashboard
+							.components"
+						:key="key"
+						:value="key"
+					>
+						{{ item.name }}
+					</option>
+				</select>
 			</div>
 			<!-- The key prop informs vue that the component should be updated when switching dashboards -->
 			<MobileLayers :key="contentStore.currentDashboard.index" />
@@ -243,6 +390,7 @@ onMounted(() => {
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
+		align-items: end;
 		row-gap: 4px;
 
 		button {
@@ -260,6 +408,10 @@ onMounted(() => {
 			color: var(--color-component-background);
 			font-size: 1.2rem;
 			font-family: var(--font-icon);
+		}
+		.small-text {
+			font-size: 1rem;
+			color: var(--color-complement-text);
 		}
 	}
 }

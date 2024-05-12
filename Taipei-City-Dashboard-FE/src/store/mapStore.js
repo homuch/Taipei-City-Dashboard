@@ -423,8 +423,9 @@ export const useMapStore = defineStore("map", {
 
 			// Get features alone
 			let { features } = data;
-			console.log(features);
-			// Get coordnates alone
+
+			features = features.filter((location) => location.geometry);
+
 			let coords = features.map(
 				(location) => location.geometry.coordinates
 			);
@@ -442,17 +443,15 @@ export const useMapStore = defineStore("map", {
 
 			features = features.filter((_, ind) => !shouldBeRemoved[ind]);
 			coords = coords.filter((_, ind) => !shouldBeRemoved[ind]);
-
 			// Calculate cell for each coordinate
 			let cells = voronoi(coords);
-
 			// Push cell outlines to source data
 			for (let i = 0; i < cells.length; i++) {
 				voronoi_source.features.push({
 					...features[i],
 					geometry: {
-						type: "LineString",
-						coordinates: cells[i],
+						type: "MultiPolygon",
+						coordinates: cells,
 					},
 				});
 			}
@@ -465,6 +464,7 @@ export const useMapStore = defineStore("map", {
 
 			let new_map_config = { ...map_config };
 			new_map_config.type = "line";
+			new_map_config.paint["line-color"] = "#ff9800";
 			this.addMapLayer(new_map_config);
 		},
 		// 4-4. Add Map Layer for Isoline Maps
@@ -747,17 +747,15 @@ export const useMapStore = defineStore("map", {
 				// If only y exists, filter by y
 				else if (map_filter.byParam.yParam && yParam) {
 					this.map.setFilter(mapLayerId, [
-						"==",
-						["get", map_filter.byParam.yParam],
-						yParam,
+						"all",
+						["==", ["get", map_filter.byParam.yParam], yParam],
 					]);
 				}
 				// default to filter by x
 				else if (map_filter.byParam.xParam && xParam) {
 					this.map.setFilter(mapLayerId, [
-						"==",
-						["get", map_filter.byParam.xParam],
-						xParam,
+						"all",
+						["==", ["get", map_filter.byParam.xParam], xParam],
 					]);
 				}
 			});

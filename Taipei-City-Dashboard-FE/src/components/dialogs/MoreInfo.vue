@@ -174,9 +174,9 @@ console.log(dialogStore.moreInfoContent);
 				<div class="moreinfo-info-control">
 					<button
 						@click="dialogStore.showDialog('mapFilter')"
-						v-if="dialogStore.moreInfoContent.map_config[0]"
+						v-if="dialogStore.moreInfoContent.filter_type"
 					>
-						<span>map</span>鄰近資料
+						<span>tune</span>進階篩選
 					</button>
 					<button
 						v-if="authStore.token"
@@ -345,7 +345,7 @@ console.log(dialogStore.moreInfoContent);
 				padding: 2px 4px;
 				border-radius: 5px;
 				background-color: var(--color-highlight);
-				font-size: var(--font-ms);
+				font-size: calc((2 * var(--font-s) + var(--font-m)) / 3);
 				transition: opacity 0.2s;
 
 				&:hover {

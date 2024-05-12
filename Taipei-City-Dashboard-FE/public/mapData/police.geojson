@@ -1,0 +1,1475 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.50981274400661,25.043870956956003 ]
+    },
+    "properties": {
+    "id":0,
+    "中文單位名稱":"臺北市政府警察局",
+    "英文單位名稱":"Taipei City Police Department",
+    "地址":"臺北市中正區延平南路96號",
+    "電話":"02 23313561"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.52281268173627,25.05259002438091 ]
+    },
+    "properties": {
+    "id":1,
+    "中文單位名稱":"中山分局",
+    "英文單位名稱":"Zhongshan Police Precinct",
+    "地址":"臺北市中山區中山北路2段1號",
+    "電話":"02 25412491"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.52144238874591,25.049988579339978 ]
+    },
+    "properties": {
+    "id":2,
+    "中文單位名稱":"中山一派出所",
+    "英文單位名稱":"Zhongshan First Police Station",
+    "地址":"臺北市中山區中山北路1段110號",
+    "電話":"02 25519321"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.52394,25.055917 ]
+    },
+    "properties": {
+    "id":3,
+    "中文單位名稱":"中山二派出所",
+    "英文單位名稱":"Zhongshan Second Police Station",
+    "地址":"臺北市中山區中山北路2段59巷21號",
+    "電話":"02 25517771"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.52373357945709,25.07271503635969 ]
+    },
+    "properties": {
+    "id":4,
+    "中文單位名稱":"圓山派出所",
+    "英文單位名稱":"Yuanshan Police Staticn",
+    "地址":"臺北市中山區中山北路3段62號",
+    "電話":"02 25969433"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.53602887269433,25.05463890861858 ]
+    },
+    "properties": {
+    "id":5,
+    "中文單位名稱":"長春路派出所",
+    "英文單位名稱":"Changchun Rd. Police Station",
+    "地址":"臺北市中山區長春路206號",
+    "電話":"02 25062289"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54055028271213,25.048466919311487 ]
+    },
+    "properties": {
+    "id":6,
+    "中文單位名稱":"長安東路派出所",
+    "英文單位名稱":"Changan E. Rd. Police Station",
+    "地址":"臺北市中山區長安東路2段165號",
+    "電話":"02 27735207"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.52795142546164,25.05991200937196 ]
+    },
+    "properties": {
+    "id":7,
+    "中文單位名稱":"民權一派出所",
+    "英文單位名稱":"Minquan First Police Station",
+    "地址":"臺北市中山區新生北路2段127之1號",
+    "電話":"02 25314672"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.53599707619334,25.067999350338216 ]
+    },
+    "properties": {
+    "id":8,
+    "中文單位名稱":"建國路派出所",
+    "英文單位名稱":"Jianguo Police Station",
+    "地址":"臺北市中山區民族東路284號",
+    "電話":"02 25099774"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54409331987988,25.07952928212023 ]
+    },
+    "properties": {
+    "id":9,
+    "中文單位名稱":"大直派出所",
+    "英文單位名稱":"Dazhi Police Station",
+    "地址":"臺北市中山區北安路456號",
+    "電話":"02 25332984"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.53314342914464,25.037831175018578 ]
+    },
+    "properties": {
+    "id":10,
+    "中文單位名稱":"大安分局",
+    "英文單位名稱":"Daan Police Precinct",
+    "地址":"臺北市大安區仁愛路3段2號",
+    "電話":"02 23259850"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.53802883694551,25.01114429234821 ]
+    },
+    "properties": {
+    "id":11,
+    "中文單位名稱":"羅斯福路派出所",
+    "英文單位名稱":"Roosevelt Rd. Police Station",
+    "地址":"臺北市大安區羅斯福路4段113巷13號",
+    "電話":"02 27355761"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.55193363838364,25.01795294494992 ]
+    },
+    "properties": {
+    "id":12,
+    "中文單位名稱":"臥龍街派出所",
+    "英文單位名稱":"Wolong St. Police Station",
+    "地址":"臺北市大安區臥龍街185號",
+    "電話":"02 27334439"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54392747815142,25.03895796845521 ]
+    },
+    "properties": {
+    "id":13,
+    "中文單位名稱":"敦化南路派出所",
+    "英文單位名稱":"Dunhua S. Rd. Police Station",
+    "地址":"臺北市大安區復興南路1段219之1號",
+    "電話":"02 27710400"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.55208836657515,25.032955235142516 ]
+    },
+    "properties": {
+    "id":14,
+    "中文單位名稱":"安和路派出所",
+    "英文單位名稱":"Anhe Rd. Police Station",
+    "地址":"臺北市大安區信義路4段216號",
+    "電話":"02 27025232"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54499041039041,25.03116107451505 ]
+    },
+    "properties": {
+    "id":15,
+    "中文單位名稱":"瑞安街派出所",
+    "英文單位名稱":"Ruian St. Police Station",
+    "地址":"臺北市大安區瑞安街23巷17號",
+    "電話":"02 27054164"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5304953310149,25.026613604340316 ]
+    },
+    "properties": {
+    "id":16,
+    "中文單位名稱":"和平東路派出所",
+    "英文單位名稱":"Heping E. Rd. Police Station",
+    "地址":"臺北市大安區和平東路1段143號",
+    "電話":"02 23218073"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.53404823550868,25.037736940926717 ]
+    },
+    "properties": {
+    "id":17,
+    "中文單位名稱":"新生南路派出所",
+    "英文單位名稱":"Xinsheng S. Rd. Police Station",
+    "地址":"臺北市大安區仁愛路3段18號",
+    "電話":"02 23258611"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51735461371156,25.045170688270904 ]
+    },
+    "properties": {
+    "id":18,
+    "中文單位名稱":"中正一分局",
+    "英文單位名稱":"Zhongzheng First Police Precinct",
+    "地址":"臺北市中正區公園路15號",
+    "電話":"02 23716426"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51735461371156,25.045170688270904 ]
+    },
+    "properties": {
+    "id":19,
+    "中文單位名稱":"忠孝西路派出所",
+    "英文單位名稱":"Zhongxiao W. Rd. Police Station",
+    "地址":"臺北市中正區公園路15號",
+    "電話":"02 23142722"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.52714588067059,25.043650842679085 ]
+    },
+    "properties": {
+    "id":20,
+    "中文單位名稱":"忠孝東路派出所",
+    "英文單位名稱":"Zhongxiao E. Rd. Police Station",
+    "地址":"臺北市中正區忠孝東路2段10號",
+    "電話":"02 23218656"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.52257932073613,25.03898078252082 ]
+    },
+    "properties": {
+    "id":21,
+    "中文單位名稱":"仁愛路派出所",
+    "英文單位名稱":"Renai Rd. Police Station",
+    "地址":"臺北市中正區仁愛路1段19號",
+    "電話":"02 23212067"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5154834715885,25.03998383501827 ]
+    },
+    "properties": {
+    "id":22,
+    "中文單位名稱":"介壽路派出所",
+    "英文單位名稱":"Jieshou Rd. Police Station",
+    "地址":"臺北市中正區公園路54號",
+    "電話":"02 23113081"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51156104757838,25.04171433710483 ]
+    },
+    "properties": {
+    "id":23,
+    "中文單位名稱":"博愛路派出所",
+    "英文單位名稱":"Boai Rd. Police Station",
+    "地址":"臺北市中正區博愛路119號",
+    "電話":"02 23142724"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51397786920928,25.03208679622624 ]
+    },
+    "properties": {
+    "id":24,
+    "中文單位名稱":"中正二分局",
+    "英文單位名稱":"Zhongzheng Second Police Precinct",
+    "地址":"臺北市中正區南海路35號",
+    "電話":"02 23751825"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51397786920928,25.03208679622624 ]
+    },
+    "properties": {
+    "id":25,
+    "中文單位名稱":"南海路派出所",
+    "英文單位名稱":"Nanhai Rd. Police Station",
+    "地址":"臺北市中正區南海路35號",
+    "電話":"02 23752835"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5319045789053,25.01517824608488 ]
+    },
+    "properties": {
+    "id":26,
+    "中文單位名稱":"思源街派出所",
+    "英文單位名稱":"Siyuan St. Police Station",
+    "地址":"臺北市中正區汀州路3段72號",
+    "電話":"02 23650844"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51652865320764,25.032320023601407 ]
+    },
+    "properties": {
+    "id":27,
+    "中文單位名稱":"南昌路派出所",
+    "英文單位名稱":"Nanchang Rd. Police Station",
+    "地址":"臺北市中正區龍福里南昌路1段7號",
+    "電話":"02 23218148"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51217969462262,25.02428399121774 ]
+    },
+    "properties": {
+    "id":28,
+    "中文單位名稱":"泉州街派出所",
+    "英文單位名稱":"Quanzhou St. Police Station",
+    "地址":"臺北市中正區中華路2段503號",
+    "電話":"02 23039915"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51782335935306,25.02608845237162 ]
+    },
+    "properties": {
+    "id":29,
+    "中文單位名稱":"廈門街派出所",
+    "英文單位名稱":"Xiamen St. Police Station",
+    "地址":"臺北市中正區螢圃里廈門街43號",
+    "電話":"02 23684427"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54103880364592,24.99268503209572 ]
+    },
+    "properties": {
+    "id":30,
+    "中文單位名稱":"文山二分局",
+    "英文單位名稱":"Wenshan Second Police Precinct",
+    "地址":"臺北市文山區景中街2號",
+    "電話":"02 29313843"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.53892635086876,25.00390043097429 ]
+    },
+    "properties": {
+    "id":31,
+    "中文單位名稱":"萬盛派出所",
+    "英文單位名稱":"Wansheng Police Station",
+    "地址":"臺北市文山區羅斯福路5段151號",
+    "電話":"02 29312502"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54103880364592,24.99268503209572 ]
+    },
+    "properties": {
+    "id":32,
+    "中文單位名稱":"景美派出所",
+    "英文單位名稱":"Jingmei Police Station",
+    "地址":"臺北市文山區景中街2號",
+    "電話":"02 29313459"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.55117099231964,25.001516243875802 ]
+    },
+    "properties": {
+    "id":33,
+    "中文單位名稱":"興隆派出所",
+    "英文單位名稱":"Xinglong Police Station",
+    "地址":"臺北市文山區里興隆路2段156號",
+    "電話":"02 29313842"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.56369659553137,24.988730513331635 ]
+    },
+    "properties": {
+    "id":34,
+    "中文單位名稱":"文山一分局",
+    "英文單位名稱":"Wenshan First Police Precinct",
+    "地址":"臺北市文山區木柵路2段202號",
+    "電話":"02 29395734"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.56729130131633,24.982474752085096 ]
+    },
+    "properties": {
+    "id":35,
+    "中文單位名稱":"木新派出所",
+    "英文單位名稱":"Muxin Police Station",
+    "地址":"臺北市文山區恆光街45號",
+    "電話":"02 29372488"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.57793556428882,24.98732117364665 ]
+    },
+    "properties": {
+    "id":36,
+    "中文單位名稱":"指南派出所",
+    "英文單位名稱":"Zhinan Police Station",
+    "地址":"臺北市文山區指南路2段177號",
+    "電話":"02 29382712"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.56681515061891,25.002266625707872 ]
+    },
+    "properties": {
+    "id":37,
+    "中文單位名稱":"萬芳派出所",
+    "英文單位名稱":"Wanfang Police Station",
+    "地址":"臺北市文山區萬芳里萬美街1段50號",
+    "電話":"02 22391753"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54702131095183,24.986763420571055 ]
+    },
+    "properties": {
+    "id":38,
+    "中文單位名稱":"復興派出所",
+    "英文單位名稱":"Fuxing Police Station",
+    "地址":"臺北市文山區木柵路1段54號",
+    "電話":"02 22367140"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.56369659553137,24.988730513331635 ]
+    },
+    "properties": {
+    "id":39,
+    "中文單位名稱":"木柵派出所",
+    "英文單位名稱":"Muzha Police Station",
+    "地址":"臺北市文山區木柵路2段202號",
+    "電話":"02 29397141"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.59470507302544,25.0552604842833 ]
+    },
+    "properties": {
+    "id":40,
+    "中文單位名稱":"南港分局",
+    "英文單位名稱":"Nangang Police Precinct",
+    "地址":"臺北市南港區向陽路150號",
+    "電話":"02 27839110"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.59470507302544,25.0552604842833 ]
+    },
+    "properties": {
+    "id":41,
+    "中文單位名稱":"玉成派出所",
+    "英文單位名稱":"Yucheng  Police Station",
+    "地址":"臺北市南港區向陽路150號",
+    "電話":"02 27886958"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.622516208008,25.038473606533962 ]
+    },
+    "properties": {
+    "id":42,
+    "中文單位名稱":"舊莊派出所",
+    "英文單位名稱":"Jiuzhuang Police Station",
+    "地址":"臺北市南港區舊莊街1段213號",
+    "電話":"02 27822492"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.58560874915155,25.046058711284477 ]
+    },
+    "properties": {
+    "id":43,
+    "中文單位名稱":"同德派出所",
+    "英文單位名稱":"Tongde Police Station",
+    "地址":"臺北市南港區同德路83號",
+    "電話":"02 27867201"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.60715338139792,25.054930402921173 ]
+    },
+    "properties": {
+    "id":44,
+    "中文單位名稱":"南港派出所",
+    "英文單位名稱":"Nangang Police Station",
+    "地址":"臺北市南港區興中路12巷2號",
+    "電話":"02 27830476"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.58958063241538,25.06925714153136 ]
+    },
+    "properties": {
+    "id":45,
+    "中文單位名稱":"內湖分局",
+    "英文單位名稱":"Neihu Police Precinct",
+    "地址":"臺北市內湖區民權東路6段101號",
+    "電話":"02 27900505"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.61836987105299,25.070355742110834 ]
+    },
+    "properties": {
+    "id":46,
+    "中文單位名稱":"康樂派出所",
+    "英文單位名稱":"Kangle Police Station",
+    "地址":"臺北市內湖區康樂街110巷16弄20號",
+    "電話":"02 26342237"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.61298143278411,25.06742951051862 ]
+    },
+    "properties": {
+    "id":47,
+    "中文單位名稱":"東湖派出所",
+    "英文單位名稱":"Donghu Police Station",
+    "地址":"臺北市內湖區五分街10號",
+    "電話":"02 26313350"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.57891822884757,25.066597174618387 ]
+    },
+    "properties": {
+    "id":48,
+    "中文單位名稱":"文德派出所",
+    "英文單位名稱":"Wende Police Station",
+    "地址":"臺北市內湖區民權東路6段26號",
+    "電話":"02 27944946"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.60135484988885,25.084099320057046 ]
+    },
+    "properties": {
+    "id":49,
+    "中文單位名稱":"大湖派出所",
+    "英文單位名稱":"Dahu Police Station",
+    "地址":"臺北市內湖區成功路5段1號",
+    "電話":"02 27909521"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.57667836140412,25.078792769536726 ]
+    },
+    "properties": {
+    "id":50,
+    "中文單位名稱":"港墘派出所",
+    "英文單位名稱":"Gangquian Police Station",
+    "地址":"臺北市內湖區內湖路1段550號",
+    "電話":"02 87518690"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.56931451712644,25.079118915199217 ]
+    },
+    "properties": {
+    "id":51,
+    "中文單位名稱":"西湖派出所",
+    "英文單位名稱":"Xihu Police Station",
+    "地址":"臺北市內湖區瑞光路515號",
+    "電話":"02 27987505"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.58157949750168,25.05528842011289 ]
+    },
+    "properties": {
+    "id":52,
+    "中文單位名稱":"潭美派出所",
+    "英文單位名稱":"Tanmei Police Station",
+    "地址":"臺北市內湖區新明路324號",
+    "電話":"02 27917233"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.59013127917352,25.08207875042817 ]
+    },
+    "properties": {
+    "id":53,
+    "中文單位名稱":"內湖派出所",
+    "英文單位名稱":"Neihu Police Station",
+    "地址":"臺北市內湖區內湖路2段261號",
+    "電話":"02 27931031"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.59751454781717,25.08116826722535 ]
+    },
+    "properties": {
+    "id":54,
+    "中文單位名稱":"康寧派出所",
+    "英文單位名稱":"Kangning Police Station",
+    "地址":"臺北市內湖區金湖路83號",
+    "電話":"02 87920061"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.50132010421181,25.13337019997453 ]
+    },
+    "properties": {
+    "id":55,
+    "中文單位名稱":"北投分局",
+    "英文單位名稱":"Beitou Police Precinct",
+    "地址":"臺北市北投區中央北路1段1號",
+    "電話":"02 28914521"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51656371787523,25.117852296862537 ]
+    },
+    "properties": {
+    "id":56,
+    "中文單位名稱":"永明派出所",
+    "英文單位名稱":"Yongming Police Station",
+    "地址":"臺北市北投區石牌路2段10號",
+    "電話":"02 28213110"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54021142281125,25.16758564657663 ]
+    },
+    "properties": {
+    "id":57,
+    "中文單位名稱":"竹子湖派出所",
+    "英文單位名稱":"Zhuzihu Police Station",
+    "地址":"臺北市北投區竹子湖路16號",
+    "電話":"02 28616082"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54859301594726,25.1487960793437 ]
+    },
+    "properties": {
+    "id":58,
+    "中文單位名稱":"公園派出所",
+    "英文單位名稱":"Gongyuan Police Station",
+    "地址":"臺北市北投區紗帽路110號",
+    "電話":"02 28610145"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.46594815085311,25.12297057419949 ]
+    },
+    "properties": {
+    "id":59,
+    "中文單位名稱":"關渡派出所",
+    "英文單位名稱":"Guandu Police Station",
+    "地址":"臺北市北投區大度路3段305號",
+    "電話":"02 28583864"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5125016984897,25.10989123889701 ]
+    },
+    "properties": {
+    "id":60,
+    "中文單位名稱":"石牌派出所",
+    "英文單位名稱":"Shipai Police Station",
+    "地址":"臺北市北投區文林北路296號",
+    "電話":"02 28231513"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5080411798771,25.127642086079803 ]
+    },
+    "properties": {
+    "id":61,
+    "中文單位名稱":"奇岩派出所",
+    "英文單位名稱":"Qiyan Police Station",
+    "地址":"臺北市北投區公館路209巷11號",
+    "電話":"02 28954410"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.49324402345059,25.145602820653885 ]
+    },
+    "properties": {
+    "id":62,
+    "中文單位名稱":"大屯派出所",
+    "英文單位名稱":"Datun Police Station",
+    "地址":"臺北市北投區中和街534號",
+    "電話":"02 28913971"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.50420544603001,25.13732876431111 ]
+    },
+    "properties": {
+    "id":63,
+    "中文單位名稱":"光明派出所",
+    "英文單位名稱":"Guangming Police Station",
+    "地址":"臺北市北投區泉源路14號",
+    "電話":"02 28911647"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.50132010421181,25.13337019997453 ]
+    },
+    "properties": {
+    "id":64,
+    "中文單位名稱":"長安派出所",
+    "英文單位名稱":"Changan Police Station",
+    "地址":"臺北市北投區中央北路1段1號",
+    "電話":"02 28912029"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5260261994389,25.090731344644627 ]
+    },
+    "properties": {
+    "id":65,
+    "中文單位名稱":"士林分局",
+    "英文單位名稱":"Shilin Police Precinct",
+    "地址":"臺北市士林區文林路235號",
+    "電話":"02 28813856"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.56025517183818,25.108110010232522 ]
+    },
+    "properties": {
+    "id":66,
+    "中文單位名稱":"翠山派出所",
+    "英文單位名稱":"Cuishan Police Station",
+    "地址":"臺北市士林區中社路1段56號",
+    "電話":"02 28411423"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51803368580019,25.087398598903615 ]
+    },
+    "properties": {
+    "id":67,
+    "中文單位名稱":"後港派出所",
+    "英文單位名稱":"Hougang Police Station",
+    "地址":"臺北市士林區福港街151號",
+    "電話":"02 28829373"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54633047099108,25.1372635056569 ]
+    },
+    "properties": {
+    "id":68,
+    "中文單位名稱":"山仔后派出所",
+    "英文單位名稱":"Shanzaihou Police Station",
+    "地址":"臺北市士林區格致路39號",
+    "電話":"02 28611295"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 118.75479141190067,0.0010984352843980319 ]
+    },
+    "properties": {
+    "id":69,
+    "中文單位名稱":"永福派出所",
+    "英文單位名稱":"Yongfu Police Station",
+    "地址":"臺北市士林區仰德大道2段2巷5號",
+    "電話":"02 28616353"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5844924560364,25.11979637151688 ]
+    },
+    "properties": {
+    "id":70,
+    "中文單位名稱":"溪山派出所",
+    "英文單位名稱":"Xishan Police Station",
+    "地址":"臺北市士林區至善路3段263號",
+    "電話":"02 28411110"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.53785808955261,25.101110759136436 ]
+    },
+    "properties": {
+    "id":71,
+    "中文單位名稱":"芝山岩派出所",
+    "英文單位名稱":"Zhishanyan Police Station",
+    "地址":"臺北市士林區仰德大道1段16號",
+    "電話":"02 28813194"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.53294438584055,25.125089495209 ]
+    },
+    "properties": {
+    "id":72,
+    "中文單位名稱":"天母派出所",
+    "英文單位名稱":"Tianmu Police Station",
+    "地址":"臺北市士林區中山北路7段192號",
+    "電話":"02 28714110"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.52472434142639,25.106640876897927 ]
+    },
+    "properties": {
+    "id":73,
+    "中文單位名稱":"蘭雅派出所",
+    "英文單位名稱":"Lanya Police Station",
+    "地址":"臺北市士林區中山北路6段153號1樓",
+    "電話":"02 28315001"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5045919193785,25.089217846236032 ]
+    },
+    "properties": {
+    "id":74,
+    "中文單位名稱":"社子派出所",
+    "英文單位名稱":"Shezi Police Station",
+    "地址":"臺北市士林區延平北路6段237號",
+    "電話":"02 28122720"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5260261994389,25.090731344644627 ]
+    },
+    "properties": {
+    "id":75,
+    "中文單位名稱":"文林派出所",
+    "英文單位名稱":"Wenlin Police Station",
+    "地址":"臺北市士林區文林路235號",
+    "電話":"02 28812211"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.56768859585065,25.033152653375662 ]
+    },
+    "properties": {
+    "id":76,
+    "中文單位名稱":"信義分局",
+    "英文單位名稱":"Xinyi Police Precinct",
+    "地址":"臺北市信義區信義路5段17號",
+    "電話":"02 27234739"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 118.75479071050115,0.0010985683626600642 ]
+    },
+    "properties": {
+    "id":77,
+    "中文單位名稱":"六張犁派出所",
+    "英文單位名稱":"Liuzhangli Police Station",
+    "地址":"臺北市信義區嘉興街301號",
+    "電話":"02 27355068"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.56388869896193,25.02660899881093 ]
+    },
+    "properties": {
+    "id":78,
+    "中文單位名稱":"吳興街派出所",
+    "英文單位名稱":"Wuxingjie St. Police Station",
+    "地址":"臺北市信義區吳興街262號",
+    "電話":"02 27398997"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 118.75479083663832,0.0010988103356993919 ]
+    },
+    "properties": {
+    "id":79,
+    "中文單位名稱":"福德街派出所",
+    "英文單位名稱":"Fudejie St. Police Station",
+    "地址":"臺北市信義區福德街86號",
+    "電話":"02 27273424"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.57584640278154,25.045664231288786 ]
+    },
+    "properties": {
+    "id":80,
+    "中文單位名稱":"五分埔派出所",
+    "英文單位名稱":"Wufenpu Police Station",
+    "地址":"臺北市信義區永吉路333號",
+    "電話":"02 27653349"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.56768859585065,25.033152653375662 ]
+    },
+    "properties": {
+    "id":81,
+    "中文單位名稱":"三張犁派出所",
+    "英文單位名稱":"Sanchangli Police Station",
+    "地址":"臺北市信義區信義路5段17號",
+    "電話":"02 27295561"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54773366849416,25.051549146589945 ]
+    },
+    "properties": {
+    "id":82,
+    "中文單位名稱":"松山分局",
+    "英文單位名稱":"Songshan Police Precinct",
+    "地址":"臺北市南京東路3段340號",
+    "電話":"02 27782081"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54805854640907,25.061746987302755 ]
+    },
+    "properties": {
+    "id":83,
+    "中文單位名稱":"民有派出所",
+    "英文單位名稱":"Minyou Police Station",
+    "地址":"臺北市松山區民權東路3段162號",
+    "電話":"02 27123638"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.56289410060903,25.059332467451124 ]
+    },
+    "properties": {
+    "id":84,
+    "中文單位名稱":"三民派出所",
+    "英文單位名稱":"Sanmin Police Station",
+    "地址":"臺北市松山區三民里民生東路5段163之1號",
+    "電話":"02 27621708"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.55139409934776,25.056722397114147 ]
+    },
+    "properties": {
+    "id":85,
+    "中文單位名稱":"東社派出所",
+    "英文單位名稱":"Dongshe Police Station",
+    "地址":"臺北市松山區精忠里敦化北路199巷5之1號",
+    "電話":"02 27135253"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.54599241576868,25.048394744173383 ]
+    },
+    "properties": {
+    "id":86,
+    "中文單位名稱":"中崙派出所",
+    "英文單位名稱":"Zhonglun Police Station",
+    "地址":"臺北市松山區長安東路2段229之1號",
+    "電話":"02 27711239"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.57715272490671,25.049836259467263 ]
+    },
+    "properties": {
+    "id":87,
+    "中文單位名稱":"松山派出所",
+    "英文單位名稱":"Songshan Police Station",
+    "地址":"臺北市松山區八德路4段692號",
+    "電話":"02 27670446"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51502687661059,25.059340932205345 ]
+    },
+    "properties": {
+    "id":88,
+    "中文單位名稱":"大同分局",
+    "英文單位名稱":"Datong Police Precinct",
+    "地址":"臺北市大同區錦西街200號",
+    "電話":"02 25577262"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51733460717004,25.05274957390956 ]
+    },
+    "properties": {
+    "id":89,
+    "中文單位名稱":"建成派出所",
+    "英文單位名稱":"Jiancheng Police Station",
+    "地址":"臺北市大同區承德路1段80號",
+    "電話":"02 25585463"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51205681330283,25.059229323928975 ]
+    },
+    "properties": {
+    "id":90,
+    "中文單位名稱":"民生西路派出所",
+    "英文單位名稱":"Minsheng Rd. Police Station",
+    "地址":"臺北市大同區保安街47之1號",
+    "電話":"02 25538587"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5117207688791,25.052205334035857 ]
+    },
+    "properties": {
+    "id":91,
+    "中文單位名稱":"延平派出所",
+    "英文單位名稱":"Yanping Police Station",
+    "地址":"臺北市大同區延平北路1段86號",
+    "電話":"02 25564340"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51353184102776,25.07545389603734 ]
+    },
+    "properties": {
+    "id":92,
+    "中文單位名稱":"重慶北路派出所",
+    "英文單位名稱":"Chongqing N. Rd. Police Station",
+    "地址":"臺北市大同區重慶北路3段320之2號",
+    "電話":"02 25944741"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51502687661059,25.059340932205345 ]
+    },
+    "properties": {
+    "id":93,
+    "中文單位名稱":"寧夏路派出所",
+    "英文單位名稱":"Ningxia Rd. Police Station",
+    "地址":"臺北市大同區錦西街200號",
+    "電話":"02 25575011"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.51350919893716,25.068788755490058 ]
+    },
+    "properties": {
+    "id":94,
+    "中文單位名稱":"民族路派出所",
+    "英文單位名稱":"Minzu Rd. Police Station",
+    "地址":"臺北市大同區重慶北路3段168號",
+    "電話":"02 25926204"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.50286993594459,25.045106686679787 ]
+    },
+    "properties": {
+    "id":95,
+    "中文單位名稱":"萬華分局",
+    "英文單位名稱":"Wanhua Police Precinct",
+    "地址":"臺北市萬華區康定路22號",
+    "電話":"02 23140364"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5021368798673,25.021923361419528 ]
+    },
+    "properties": {
+    "id":96,
+    "中文單位名稱":"青年路派出所",
+    "英文單位名稱":"Qingnian Rd. Police Station",
+    "地址":"臺北市萬華區萬大路423巷112號",
+    "電話":"02 23054219"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.4981965493545,25.02241371894373 ]
+    },
+    "properties": {
+    "id":97,
+    "中文單位名稱":"東園街派出所",
+    "英文單位名稱":"Dongyuan St. Police Station",
+    "地址":"臺北市萬華區長泰街130號",
+    "電話":"02 23033247"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.49560674740593,25.02816165002671 ]
+    },
+    "properties": {
+    "id":98,
+    "中文單位名稱":"西園路派出所",
+    "英文單位名稱":"Xiyuan Rd. Police Station",
+    "地址":"臺北市萬華區東園街17號",
+    "電話":"02 23032943"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.50268392294251,25.031081340870774 ]
+    },
+    "properties": {
+    "id":99,
+    "中文單位名稱":"莒光派出所",
+    "英文單位名稱":"Juguang Police Station",
+    "地址":"臺北市萬華區莒光路171號",
+    "電話":"02 23064987"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.49317300155802,25.034286997204983 ]
+    },
+    "properties": {
+    "id":100,
+    "中文單位名稱":"華江派出所",
+    "英文單位名稱":"Huajiang Police Station",
+    "地址":"臺北市萬華區環河南路2段196號",
+    "電話":"02 23061531"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.49826524784208,25.03445139524913 ]
+    },
+    "properties": {
+    "id":101,
+    "中文單位名稱":"大理街派出所",
+    "英文單位名稱":"Dali St. Police Station",
+    "地址":"臺北市萬華區大理街99號",
+    "電話":"02 23063468"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.50033300337418,25.035081995741372 ]
+    },
+    "properties": {
+    "id":102,
+    "中文單位名稱":"康定路派出所",
+    "英文單位名稱":"Kangding Rd. Police Station",
+    "地址":"臺北市萬華區和平西路3段112號",
+    "電話":"02 23064226"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.49961057723743,25.038600516337386 ]
+    },
+    "properties": {
+    "id":103,
+    "中文單位名稱":"龍山派出所",
+    "英文單位名稱":"Longshan Police Station",
+    "地址":"臺北市萬華區桂林路135號",
+    "電話":"02 23314823"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.50288760956656,25.04512604630658 ]
+    },
+    "properties": {
+    "id":104,
+    "中文單位名稱":"西門町派出所",
+    "英文單位名稱":"Ximending Police Station",
+    "地址":"臺北市萬華區康定路22號",
+    "電話":"02 23312212"
+    }
+  }
+]
+}

@@ -268,6 +268,95 @@ export const useContentStore = defineStore("content", {
 			}
 			this.loading = false;
 		},
+		async updateDashboardComponentData(index) {
+			// 2-1. Get the component config
+			console.log(index);
+			const dialogStore = useDialogStore();
+			const response_1 = await http.get(`/component/`, {
+				params: {
+					filtermode: "eq",
+					filterby: "index",
+					filtervalue: index,
+				},
+			});
+			console.log(response_1.data);
+			// console.log(response_1.data);
+			if (response_1.data.results === 0) {
+				this.loading = false;
+				this.error = true;
+				return;
+			}
+
+			const moreInfoContent = response_1.data.data[0];
+			const id = this.currentDashboard.components.findIndex(
+				({ index: _index }) => index === _index
+			);
+			this.currentDashboard.components[id] = moreInfoContent;
+			// console.log(dialogStore.moreInfoContent);
+			// 2-2. Get the component chart data
+			const response_2 = await http.get(
+				`/component/${this.currentDashboard.components[id].id}/chart`,
+				{
+					params: !["static", "current", "demo"].includes(
+						moreInfoContent.time_from
+					)
+						? {
+								filter_by_distance:
+									dialogStore.mapFilterRadius !== 0,
+								filter_distance: `${dialogStore.mapFilterRadius}`,
+								filter_lat: `${dialogStore.coor.latitude}`,
+								filter_long: `${dialogStore.coor.longitude}`,
+								...getComponentDataTimeframe(
+									dialogStore.moreInfoContent.time_from,
+									dialogStore.moreInfoContent.time_to,
+									true
+								),
+						  }
+						: {
+								filter_by_distance:
+									dialogStore.mapFilterRadius !== 0,
+								filter_distance: `${dialogStore.mapFilterRadius}`,
+								filter_lat: `${dialogStore.coor.latitude}`,
+								filter_long: `${dialogStore.coor.longitude}`,
+						  },
+				}
+			);
+
+			this.currentDashboard.components[id].chart_data =
+				response_2.data.data;
+			console.log(this.currentDashboard.components[id]);
+
+			if (response_2.data.categories) {
+				this.currentDashboard.components[id].chart_config.categories =
+					response_2.data.categories;
+			}
+
+			// 2-3. Get the component history data if applicable
+			if (this.currentDashboard.components[id].history_config) {
+				for (let i in this.currentDashboard.components[id]
+					.history_config.range) {
+					const response = await http.get(
+						`/component/${this.currentDashboard.components[id].id}/history`,
+						{
+							params: getComponentDataTimeframe(
+								this.currentDashboard.components[id]
+									.history_config.range[i],
+								"now",
+								true
+							),
+						}
+					);
+
+					if (i === "0") {
+						this.currentDashboard.components[id].history_data = [];
+					}
+					this.currentDashboard.components[id].history_data.push(
+						response.data.data
+					);
+				}
+			}
+			this.loading = false;
+		},
 
 		/* Route Change Methods */
 		// 1. Called whenever route changes except for between /dashboard and /mapview
@@ -292,7 +381,7 @@ export const useContentStore = defineStore("content", {
 		},
 		// 2. Get the info of a single component (used in /component/:index)
 		async getCurrentComponentData(index) {
-			console.log("WOOOO", index);
+			// console.log("WOOOO", index);
 			const dialogStore = useDialogStore();
 			if (Object.keys(this.contributors).length === 0) {
 				this.setContributors();

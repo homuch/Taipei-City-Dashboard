@@ -54,8 +54,12 @@ const handleRadiusChange = () => {
 
 		if (filter_type === "time_clip") {
 			const dt = new Date();
-			const corr = new Date(dt + inputValue.value * msPerDay);
-			// console.log(corr);
+			const corr = new Date(+dt + inputValue.value * msPerDay);
+			console.log(
+				`${corr.getFullYear()}-${corr.getMonth() + 1 < 10 ? "0" : ""}${
+					corr.getMonth() + 1
+				}-${corr.getDate() < 10 ? "0" : ""}${corr.getDate()} 00:00:00`
+			);
 			dialogStore.mapFilterRadius = `${corr.getFullYear()}-${
 				corr.getMonth() + 1 < 10 ? "0" : ""
 			}${corr.getMonth() + 1}-${
@@ -72,6 +76,7 @@ const handleRadiusChange = () => {
 watch(inputValue, handleRadiusChange);
 watch(filter_type, () => {
 	inputValue.value = 0;
+	dialogStore.mapFilterRadius = 0;
 });
 
 const currentPosition = computed(() => {
@@ -80,7 +85,7 @@ const currentPosition = computed(() => {
 
 const currentRepresentDate = computed(() => {
 	let dt = new Date();
-	let corr = new Date(dt - inputValue.value * msPerDay);
+	let corr = new Date(+dt + inputValue.value * msPerDay);
 	return corr.toLocaleDateString();
 });
 
