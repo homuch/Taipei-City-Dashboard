@@ -48,76 +48,95 @@ function handleClose() {
 </script>
 
 <template>
-  <DialogContainer
-    :dialog="`downloadData`"
-    @on-close="handleClose"
-  >
-    <div class="downloaddata">
-      <h2>下載資料</h2>
-      <div class="downloaddata-input">
-        <h3>請輸入檔名</h3>
-        <input
-          v-model="name"
-          type="text"
-          :minlength="1"
-          required
-        >
-      </div>
-      <h3>請選擇檔案格式</h3>
-      <div>
-        <input
-          id="JSON"
-          v-model="fileType"
-          class="downloaddata-radio"
-          type="radio"
-          value="JSON"
-        >
-        <label for="JSON">
-          <div />
-          JSON
-        </label>
-        <input
-          id="CSV"
-          v-model="fileType"
-          class="downloaddata-radio"
-          type="radio"
-          value="CSV"
-        >
-        <label for="CSV">
-          <div />
-          CSV (UTF-8)
-        </label>
-      </div>
-      <div class="downloaddata-control">
-        <button
-          class="downloaddata-control-cancel"
-          @click="handleClose"
-        >
-          取消
-        </button>
-        <button
-          v-if="name && fileType === 'JSON'"
-          class="downloaddata-control-confirm"
-          @click="handleSubmit"
-        >
-          <a
-            :href="`data:application/json;charset=utf-8,${parsedJson}`"
-            :download="`${name}.json`"
-          >下載JSON</a>
-        </button>
-        <button
-          v-if="name && fileType === 'CSV'"
-          class="downloaddata-control-confirm"
-          @click="handleSubmit"
-        >
-          <a
-            :href="`data:text/csv;charset=utf-8,${parsedCsv}`"
-            :download="`${name}.csv`"
-          >下載CSV</a>
-        </button>
-      </div>
-    </div>
-  </DialogContainer>
+	<DialogContainer :dialog="`downloadData`" @on-close="handleClose">
+		<div class="downloaddata">
+			<h2>下載資料</h2>
+			<div class="downloaddata-input">
+				<h3>請輸入檔名</h3>
+				<input v-model="name" type="text" :minlength="1" required />
+			</div>
+			<h3>請選擇檔案格式</h3>
+			<div>
+				<input
+					id="JSON"
+					v-model="fileType"
+					class="downloaddata-radio"
+					type="radio"
+					value="JSON"
+				/>
+				<label for="JSON">
+					<div />
+					JSON
+				</label>
+				<input
+					id="CSV"
+					v-model="fileType"
+					class="downloaddata-radio"
+					type="radio"
+					value="CSV"
+				/>
+				<label for="CSV">
+					<div />
+					CSV (UTF-8)
+				</label>
+				<input
+					id="GEOJSON"
+					v-model="fileType"
+					class="downloaddata-radio"
+					type="radio"
+					value="GEOJSON"
+				/>
+				<label for="GEOJSON">
+					<div />
+					GEOJSON
+				</label>
+			</div>
+			<div class="downloaddata-control">
+				<button
+					class="downloaddata-control-cancel"
+					@click="handleClose"
+				>
+					取消
+				</button>
+				<button
+					v-if="name && fileType === 'JSON'"
+					class="downloaddata-control-confirm"
+					@click="handleSubmit"
+				>
+					<a
+						:href="`data:application/json;charset=utf-8,${parsedJson}`"
+						:download="`${name}.json`"
+						>下載JSON</a
+					>
+				</button>
+				<button
+					v-if="name && fileType === 'CSV'"
+					class="downloaddata-control-confirm"
+					@click="handleSubmit"
+				>
+					<a
+						:href="`data:text/csv;charset=utf-8,${parsedCsv}`"
+						:download="`${name}.csv`"
+						>下載CSV</a
+					>
+				</button>
+				<button
+					v-if="
+						name &&
+						fileType === 'GEOJSON' &&
+						dialogStore.moreInfoContent.map_config[0]
+					"
+					class="downloaddata-control-confirm"
+				>
+					<a
+						:href="`/mapData/${dialogStore.moreInfoContent.map_config[0].index}.geojson`"
+						:download="`${name}.geojson`"
+						>下載GEOJSON</a
+					>
+				</button>
+			</div>
+		</div>
+	</DialogContainer>
 </template>
 
 <style scoped lang="scss">

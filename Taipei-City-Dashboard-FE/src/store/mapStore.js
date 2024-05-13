@@ -443,6 +443,7 @@ export const useMapStore = defineStore("map", {
 
 			features = features.filter((_, ind) => !shouldBeRemoved[ind]);
 			coords = coords.filter((_, ind) => !shouldBeRemoved[ind]);
+
 			// Calculate cell for each coordinate
 			let cells = voronoi(coords);
 			// Push cell outlines to source data
@@ -464,7 +465,7 @@ export const useMapStore = defineStore("map", {
 
 			let new_map_config = { ...map_config };
 			new_map_config.type = "line";
-			new_map_config.paint["line-color"] = "#ff9800";
+			// new_map_config.paint["line-color"] = "#ff9800";
 			this.addMapLayer(new_map_config);
 		},
 		// 4-4. Add Map Layer for Isoline Maps

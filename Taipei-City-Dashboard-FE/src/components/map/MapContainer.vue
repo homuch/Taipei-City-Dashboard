@@ -75,7 +75,7 @@ const to_display = computed(() => {
 	const used = new Date(
 		now.getTime() + inputValue.value * 24 * 60 * 60 * 1000
 	);
-	return `${used.getFullYear()}年${used.getMonth() + 1}日${used.getDate()}日`;
+	return `${used.getFullYear()}年${used.getMonth() + 1}月${used.getDate()}日`;
 });
 
 watch(inputValue, () => {

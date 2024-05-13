@@ -164,11 +164,11 @@ export const useContentStore = defineStore("content", {
 							component.time_from
 						)
 							? {
-									filter_by_distance:
-										dialogStore.mapFilterRadius !== 0,
-									filter_distance: `${dialogStore.mapFilterRadius}`,
-									filter_lat: `${dialogStore.coor.latitude}`,
-									filter_long: `${dialogStore.coor.longitude}`,
+									// filter_by_distance:
+									// 	dialogStore.mapFilterRadius !== 0,
+									// filter_distance: `${dialogStore.mapFilterRadius}`,
+									// filter_lat: `${dialogStore.coor.latitude}`,
+									// filter_long: `${dialogStore.coor.longitude}`,
 									...getComponentDataTimeframe(
 										component.time_from,
 										component.time_to,
@@ -176,11 +176,11 @@ export const useContentStore = defineStore("content", {
 									),
 							  }
 							: {
-									filter_by_distance:
-										dialogStore.mapFilterRadius !== 0,
-									filter_distance: `${dialogStore.mapFilterRadius}`,
-									filter_lat: `${dialogStore.coor.latitude}`,
-									filter_long: `${dialogStore.coor.longitude}`,
+									// filter_by_distance:
+									// 	dialogStore.mapFilterRadius !== 0,
+									// filter_distance: `${dialogStore.mapFilterRadius}`,
+									// filter_lat: `${dialogStore.coor.latitude}`,
+									// filter_long: `${dialogStore.coor.longitude}`,
 							  },
 					}
 				);

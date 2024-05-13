@@ -407,13 +407,20 @@ import taipeiBoundaryCollection from "../../../public/mapData/taipei_boundary.js
 export function voronoi(data) {
 	const tpoints = data.map((coor) => turf.point(coor));
 	const collection = turf.featureCollection(tpoints);
+	// console.log(collection);
 	const voronoiPolygons = turf.voronoi(collection);
 	const taipeiBoundary = turf.polygon(
 		taipeiBoundaryCollection.features[0].geometry.coordinates
 	);
 
-	return voronoiPolygons.features.map(
-		(polygon) =>
-			turf.intersect(polygon, taipeiBoundary).geometry.coordinates
-	);
+	return voronoiPolygons.features
+		.map((polygon, id) => {
+			// console.log(polygon, polygon.geometry.coordinates[0] > 120);
+			let p = turf.intersect(polygon, taipeiBoundary);
+			// console.log(p);
+			// if (p === null) console.log(id);
+			return turf.intersect(polygon, taipeiBoundary)?.geometry
+				?.coordinates;
+		})
+		.filter((v) => v);
 }
